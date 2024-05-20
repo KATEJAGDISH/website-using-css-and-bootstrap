@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 152px;
+            width: 152px;
+            background-color: blueviolet;
+            background-image: url('../images/image_2.jpg.webp');
+        }
+        .anim{
+            animation-name: boxanim;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        .anim:hover{
+            animation-play-state: paused;
+        }
+        @keyframes boxanim {
+            0%{transform: translate(0,0) rotate(0); background-color:aqua;}
+
+            25%{transform: translate(1200px,0) rotate(360deg); background-color:rgb(160, 34, 107);} 
+            50%{transform: translate(1200px,1200px) rotate(720deg); background-color:aqua;}
+             75%{transform: translate(0,1200px) rotate(360deg); background-color:rgb(54, 135, 43);}
+             100%{transform: translate(0,0) rotate(0); background-color:rgb(98, 16, 94);}
+        }
+    </style>
+    <div class="box anim">  gum gum zum zum </div>
+</body>
+</html>

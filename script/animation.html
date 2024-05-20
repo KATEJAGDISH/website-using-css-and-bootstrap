@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: salmon;
+            transition: 0.5s;
+            font-size: 50px;
+            text-align: center;
+            /*line-height: 200px;*/
+        }
+        .tt-x:hover{transform:translateX(150px);}
+        .tt-y:hover{transform: translateY(150px);}
+        .tt-z:hover{transform: translate(150px,150px);}
+
+        .tr-x:hover{transform: rotateX(180deg);}
+        .tr-y:hover{transform: rotateY(180deg);}
+        .tr-z:hover{transform: rotateZ(180deg);}
+
+      
+        .tsk-x:hover{transform: skewX(30deg);}
+.tsk-y:hover:hover{transform: skewY(30deg);}
+.tsk:hover{transform: skew(30deg,30deg);}
+
+        .tsc-x:hover{transform: scaleX(1.5);}
+.tsc-y:hover:hover{transform: scaleY(1.5);}
+.tsc:hover{transform: scale(1.5,1.5);}
+
+     .t-all:hover{transform: translate(80px) rotate(270deg) scale(1.8,1.8) skewX(90deg);}
+
+    </style>
+
+    <h3>all effect</h3>
+    <div class="box t-all"> jay shreeram </div>
+
+    <h3>transform: Skew X 180 deg</h3>
+    <div class="box tsk-x">Box</div>
+    <h3>transform: Skew Y 180 deg</h3>
+    <div class="box tsk-y">Box</div>
+    <h3>transform: Skew Z 180 deg</h3>
+    <div class="box tsk">Box</div>
+
+    <h3>transform: Skew X 180 deg</h3>
+    <div class="box tsc-x">Box</div>
+    <h3>transform: Skew Y 180 deg</h3>
+    <div class="box tsc-y">Box</div>
+    <h3>transform: Skew Z 180 deg</h3>
+    <div class="box tsc">Box</div>
+
+    <h3>transform: translate X 150px</h3>
+    <div class="box tt-x">Box</div>
+    <h3>transform: translate Y 150px</h3>
+    <div class="box tt-y">Box</div>
+    <h3>transform: translate Z 150px</h3>
+    <div class="box tt-z">BOx</div>
+
+    <h3>transform: rotated X 180 deg</h3>
+    <div class="box tr-x">Box</div>
+    <h3>transform: rotated Y 180 deg</h3>
+    <div class="box tr-y">Box</div>
+    <h3>transform: rotated Z 180 deg</h3>
+    <div class="box tr-z">Box</div>
+</body>
+</html>

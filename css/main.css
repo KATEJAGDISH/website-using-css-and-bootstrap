@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+:root{
+  --ps-green:#00bd56;
+  --ps-grey:#f8f9fd;
+  --ps-blue: #207dff ;
+  --ps-grad:linear-gradient(45deg,var(--ps-blue) 0%, var(--ps-green) 100%);
+}
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing:border-box;
+}
+.t-green{
+  color:var(--ps-green);
+}
+div{
+  display:flex;
+  width:100%;
+}
+.container{
+  padding:0 16px;
+
+}
+.ps-contact-info, .navbar-top-social{
+  width:auto;
+  color:white;
+}
+.ps-contact-info{
+  margin-right:20px;
+}
+.ps-navbar-top{
+  justify-content: space-between;
+  padding-top:10px;
+  padding-bottom:10px;
+  /* remove earlier padding - and add this */
+  background: var(--ps-grad);
+}
+.navbar-top-social i{
+  margin-left:24px;
+}
+.pc-icon-text{
+  margin-left:10px;
+}
+.ps-navlink{
+  padding-top:35px;
+  padding-bottom:35px;
+  text-decoration: none;
+  font-weight: 600;
+  color:black;
+}
+.ps-navlink:hover{
+    color:var(--ps-green);
+    border-bottom: 1px solid var(--ps-green);
+    
+}
+
+.ps-navbar-main{
+  align-items: center;
+}
+.ps-logo h2{
+  font-size:30px;
+  font-weight:700;
+}
+.ps-navmenu{
+  justify-content: space-between;
+}
+.ps-navitem{
+  text-align: center;
+  width:100%;
+}
+.ps-banner{
+  background-image: url("../images/bg_1.jpg.webp") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:600px;
+  justify-content: center;
+  align-items: center;
+
+}
+.banner-info{
+  flex-direction: column;
+  width:80%;
+  align-items: center;
+}
+.ps-btn{
+  background-color: var(--ps-green);
+  padding:16px 25px;
+  font-size:18px;
+  color:white;
+  border:1px solid var(--ps-green);
+  font-weight:700;
+  margin-top:20px;
+}
+.ps-banner h1{
+  font-size:60px;
+  text-align: center;
+  color:white;
+}
+.ps-section{
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.ps-grey{
+  background-color:var(--ps-grey);
+}
+.ps-blog{
+  flex-direction: column;
+}
+.bg-std{
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.ps-blog-item .bg-std{
+  height:300px;
+  border-radius:10px;
+}
+.ps-blog-gallery{
+  margin-top:80px;
+  gap:20px;
+}
+.ps-blog h2{
+  text-align: center;
+}
+.fc{
+  flex-direction: column;
+}
+.ps-blog-details{
+  padding:30px 20px;
+  background-color:white;
+ 
+}
+.ps-blog-item{
+  box-shadow:0 2px 2px lightgrey;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+.ps-blog-desc{
+  margin-top:20px;
+}
+.ps-blog-item-meta{
+  font-size:14px;
+  color:grey;
+  font-weight:600;
+}
+.ps-price{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.ps-blog-details > div{
+  justify-content: center;
+}
+.ps-price sub{
+  font-size:13px;
+  align-self:flex-end;
+  /* aligns just this item on the cross axis */
+}
+.ps-price span{
+  font-size:60px;
+  font-weight:600;
+}
+.ps-price sup{
+  font-size:30px;
+  color:grey;
+  margin-top:11px;
+  /* adjustment, must be a better way to do this */
+}
+.ps-tbl-row{
+  padding:15px;
+}
+.ps-tbl-row:nth-of-type(even){
+  background-color:lightgrey
+}
+.ps-gallery{
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top:60px;
+}
+.img-container{
+  width:30%;
+  position:relative;
+  margin-top:20px;
+ 
+}
+/* descendant selector */
+.img-container img{
+  width:100%;
+}
+.cover{
+  position: absolute;
+  width:100%;
+  height:100%;
+ background-color:rgba(255, 255, 255, 0);
+  transition: 0.5s;
+  top:0;
+  left:0;
+  transition:0.5s;
+}
+.img-container:hover .cover{
+  background-color:rgba(255, 255, 255, 0.4);
+}
+.img-container:hover .btn-circle{
+  opacity:1;
+}
+.img-container:hover .gallery-text{
+  opacity:1;
+}
+.btn-circle{
+  width:70px;
+  height:70px;
+  background-color:green;
+  border-radius:50%;
+  border:none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size:40px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  opacity:0;
+  /* we will learn later */
+  transform: translate(-50%, -50%);
+  transition:0.5s; 
+}
+.gallery-text{
+  font-size:20px;
+  font-weight: bold;
+  letter-spacing:1px;
+  margin:20px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  opacity:0;
+}
+/*
+1) Requirements Gathering: User story (Aim, overall)
+    flowchart (technical head, HR)
+2) Designing: Designs - Pages / Colors  (Figma / Photoshop)
+3) Designer (web) <---- classes (resuable) - code  (do not copy - reuse)
+
+*/
+
+/*footer *//*
+.ps-footer {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #080808;
+  position: relative;
+}*/
+.col{
+  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+.mw{
+min-width:576px;
+max-width:1920px;
+
+}
+.main{
+justify-content: center;
+}
+@media(max-width:992px){
+  .img-container{
+      width:45%;
+  }
+}
+@media(max-width:768px){
+.ps-blog-gallery{
+  flex-direction: column;
+}
+.ps-banner{
+  height:500px;
+}
+.ps-banner h1{
+  font-size:50px;
+}
+}
+@media(max-width:576px){
+.img-container{
+    width:100%;
+}
+.ps-banner{
+  height:400px;
+}
+.ps-banner h1{
+  font-size:36px;
+}
+}
+
+/* give widths in %, use flex-wrap on main div
+change direction to column */
+

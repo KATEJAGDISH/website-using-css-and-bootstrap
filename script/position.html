@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border-width:2px ;
+        border-style: solid;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    div>span{
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2px;
+    }
+    .outer{
+        width: 900px;
+        height: 500px;
+        border-color:red ;
+    }
+    .outer>span{
+        background-color: red;
+        color: white;
+    }
+
+    
+    .inner{
+        width: 700px;
+        height: 300px;
+        border-color:blue ;
+        position: relative;
+          /* relative:- 4 properties : left,right,top,bottom 
+        the  element can now move relative to it oringinal pos this does not effrct 
+        the other element as it reserves the space it occupied */
+    }
+    .inner>span{
+        background-color:blue;
+        color: white;
+    }
+    .innermost{
+        width: 400px;
+        height: 100px;
+        border-color:green;
+        position:fixed;
+        left: 300px;
+        top: 200px;
+      /* */
+      
+    }
+    .innermost>span{
+        background-color: green;
+        color: white;
+    }
+    .gap{
+        background-color: lightblue;
+        height: 500px;
+    }
+
+</style>
+<body>
+    <div class="outer">
+        <span>outer</span>
+        <div class="inner">
+            <span>inner</span>
+            <div class="innermost"><span>innermost</span></div>
+        <h1>hii there</h1></div>
+    </div>
+    <div class="gap"></div>
+</body>
+</html>
